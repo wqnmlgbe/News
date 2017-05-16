@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply from:'../dep_config.gradle'
+android {
+    compileSdkVersion CompileSdkVersion
+    buildToolsVersion BuildToolsVersion
+
+    defaultConfig {
+        minSdkVersion MinSdkVersion
+        targetSdkVersion TargetSdkVersion
+        versionCode VersionCode
+        versionName VersionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "$SupportLibraryGroup:appcompat-v7:$SupportLibraryVersion"
+    testCompile "junit:junit:$JunitVersion"
+
+    compile "$SupportLibraryGroup:appcompat-v7:$SupportLibraryVersion"
+    compile "$SupportLibraryGroup:cardview-v7:$SupportLibraryVersion"
+    compile "$SupportLibraryGroup:design:$SupportLibraryVersion"
+    compile "$SupportLibraryGroup:recyclerview-v7:$SupportLibraryVersion"
+    compile "$SupportLibraryGroup:support-v4:$SupportLibraryVersion"
+
+    // Dagger dependencies
+    apt "$DaggerGroup:dagger-compiler:$DaggerVersion"
+    compile "javax.annotation:jsr250-api:1.0"
+    compile "$DaggerGroup:dagger:$DaggerVersion"
+    //FastJson
+    compile "$FastJsonGroup:fastjson:$FastJsonVersion"
+    //RxJava
+    compile "$RxJavaGroup:rxandroid:$RxJavaVersion"
+    //Retrofit2
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta1'
+    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+    compile "$OkHttpGroup:okhttp:$OkHttpVersion"
+    //Glide
+    compile "$GlideGroup:glide:$GlideVersion"
+    //ButterKnife
+    compile "$ButterKnifeGroup:butterknife:$ButterKnifeVersion"
+
+//    compile 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+    // jsoup HTML parser library @ http://jsoup.org/
+    compile 'org.jsoup:jsoup:1.10.2'
+}

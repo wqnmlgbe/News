@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="12dp"
+    android:id="@+id/layout_item_news"
+    >
+    <include layout="@layout/view_divider_line" />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:text="标题"
+        android:textColor="@color/colorMultiImgNewsTitle"
+        />
+    <LinearLayout
+        android:id="@+id/layout_imgs"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/tv_title"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/colorMultiImgNewsSource"
+            android:textSize="12sp"
+            android:layout_below="@id/layout_imgs"
+            android:text="来源"/>
+
+        <TextView
+            android:id="@+id/tv_comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorMultiImgNewsSource"
+            android:textSize="12sp"
+            android:layout_below="@id/layout_imgs"
+            android:layout_alignParentRight="true"
+            android:text="1条评论"/>
+</RelativeLayout>

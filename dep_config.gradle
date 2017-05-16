@@ -1,0 +1,39 @@
+ext{
+    // Sdk and tools version
+    MinSdkVersion = 15
+    TargetSdkVersion = 25
+    CompileSdkVersion = 25
+    BuildToolsVersion = '25.0.0'
+
+    // App dependencies version
+    SupportLibraryVersion = '25.3.1'
+    JunitVersion = '4.12'
+    DaggerVersion = '2.0.2'
+    OkHttpVersion='3.3.1'
+    RetrofitVersion='2.0.0-beta1'
+    FastJsonVersion='1.2.31'
+    GlideVersion='3.6.1'
+    RxJavaVersion='1.1.0'
+    ButterKnifeVersion='7.0.1'
+
+    //release version
+    VersionCode=1
+    VersionName='1.0'
+
+    //application id
+    ApplicationId='open.cklan.com.topline'
+
+
+    //dependencies group
+    SupportLibraryGroup='com.android.support'
+    OkHttpGroup='com.squareup.okhttp3'
+    RetrofitGroup='com.squareup.retrofit'
+    RxJavaGroup='io.reactivex'
+    FastJsonGroup='com.alibaba'
+    GlideGroup='com.github.bumptech.glide'
+    DaggerGroup='com.google.dagger'
+    ButterKnifeGroup='com.jakewharton'
+
+    //api key
+    JUHE_APPKEY="\"b2a6052905f6fcce05291b03e730261c\""
+}

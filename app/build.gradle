@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply from:'../dep_config.gradle'
+android {
+    compileSdkVersion CompileSdkVersion
+    buildToolsVersion BuildToolsVersion
+    defaultConfig {
+        applicationId ApplicationId
+        minSdkVersion MinSdkVersion
+        targetSdkVersion TargetSdkVersion
+        versionCode VersionCode
+        versionName VersionName
+        buildConfigField "String","JUHE_APPKEY", JUHE_APPKEY
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "$SupportLibraryGroup:appcompat-v7:$SupportLibraryVersion"
+    testCompile "junit:junit:$JunitVersion"
+    compile project(':library')
+    apt "$DaggerGroup:dagger-compiler:$DaggerVersion"
+    compile project(path: ':videoplayer')
+}
