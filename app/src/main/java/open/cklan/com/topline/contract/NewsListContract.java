@@ -16,6 +16,8 @@ public interface NewsListContract {
 
         void goDetailActivity(String id);
 
+        void goGalleryActivity(List<String> pic);
+
         void showRefreshError(String errorCode,String errorMessage);
 
         void showLoadMoreError(String errorCode,String errorMessage);
@@ -31,5 +33,7 @@ public interface NewsListContract {
         void ignoreNew(int position,String category);
 
         void clickItem(String url);
+
+        void clickItem(List<String> pic);
     }
 }

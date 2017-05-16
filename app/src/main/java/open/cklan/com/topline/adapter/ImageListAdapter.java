@@ -41,12 +41,17 @@ public class ImageListAdapter extends BaseNewsListAdapter {
             holder.setText(R.id.tv_img_num,itemEntity.imgsum+"张");
             holder.setText(R.id.tv_title,itemEntity.setname);
             holder.setText(R.id.tv_comment_num,itemEntity.replynum+"条评论");
+            holder.addOnClickListener(R.id.layout_item_news,this);
         }
     }
 
 
     @Override
     public void onItemClick(BaseAdapter adapter, View view, int position) {
-
+        BaseListItemEntity item = getItem(position);
+        if(item!=null && item instanceof ImageListItemEntity) {
+            ImageListItemEntity itemEntity = (ImageListItemEntity) item;
+            listener.clickItem(itemEntity.pics);
+        }
     }
 }

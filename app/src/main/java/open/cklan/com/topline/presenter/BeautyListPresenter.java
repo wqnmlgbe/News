@@ -1,5 +1,7 @@
 package open.cklan.com.topline.presenter;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import open.cklan.com.library.model.NewsListEntity;
@@ -76,4 +78,6 @@ public class BeautyListPresenter extends BaseListPresenter{
     public void clickItem(String url) {
         view.goDetailActivity(url);
     }
+
+
 }

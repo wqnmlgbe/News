@@ -73,11 +73,11 @@ public class MainActivityPresenter extends BasePresenter<MainContract.View> impl
             List<CategoryEntity> list = new ArrayList<>();
             list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_TOP, CategoryType.CATEGORY_TYPE_TOP, CategoryTid.CATEGORY_TID_TOP));
             list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_VIDEO, CategoryType.CATEGORY_TYPE_VIDEO,CategoryTid.CATEGORY_TID_VIDEO));
+            list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_IMAGE, CategoryType.CATEGORY_TYPE_IMAGE,CategoryTid.CATEGORY_TID_IMAGE));
+            list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_BEAUTY,CategoryType.CATEGORY_TYPE_BEAUTY,CategoryTid.CATEGORY_TID_BEAUTY));
             list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_SPORTS, CategoryType.CATEGORY_TYPE_SPORTS,CategoryTid.CATEGORY_TID_SPORTS));
             list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_CAR, CategoryType.CATEGORY_TYPE_CAR,CategoryTid.CATEGORY_TID_CAR));
-            list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_BEAUTY,CategoryType.CATEGORY_TYPE_BEAUTY,CategoryTid.CATEGORY_TID_BEAUTY));
             list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_ENTERTAINMENT, CategoryType.CATEGORY_TYPE_ENTERTAINMENT,CategoryTid.CATEGORY_TID_ENTERTAINMENT));
-            list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_IMAGE, CategoryType.CATEGORY_TYPE_IMAGE,CategoryTid.CATEGORY_TID_IMAGE));
             list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_HOT, CategoryType.CATEGORY_TYPE_HOT,CategoryTid.CATEGORY_TID_HOT));
             list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_HISTORY, CategoryType.CATEGORY_TYPE_HISTORY,CategoryTid.CATEGORY_TID_HISTORY));
             list.add(new CategoryEntity(CategoryTitle.CATEGORY_TITLE_TECH, CategoryType.CATEGORY_TYPE_TECH,CategoryTid.CATEGORY_TID_TECH));

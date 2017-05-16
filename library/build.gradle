@@ -56,4 +56,5 @@ dependencies {
 //    compile 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
     // jsoup HTML parser library @ http://jsoup.org/
     compile 'org.jsoup:jsoup:1.10.2'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
 }

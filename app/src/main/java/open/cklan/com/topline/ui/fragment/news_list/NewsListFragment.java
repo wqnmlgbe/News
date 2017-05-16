@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +38,7 @@ import open.cklan.com.topline.component.fragment.NewsListComponent;
 import open.cklan.com.topline.contract.NewsListContract;
 import open.cklan.com.topline.module.presenter.NewsListPresenterModule;
 import open.cklan.com.topline.presenter.BaseListPresenter;
+import open.cklan.com.topline.ui.activity.GalleryActivity;
 import open.cklan.com.topline.ui.activity.NewsDetailActivity;
 import open.cklan.com.topline.ui.fragment.base.BaseNewsListFragment;
 
@@ -161,6 +164,15 @@ public class NewsListFragment extends BaseNewsListFragment implements NewsListCo
         Intent intent=new Intent();
         intent.setClass(getContext(), NewsDetailActivity.class);
         intent.putExtra(NewsDetailActivity.ARG_DOC_ID,id);
+        startActivity(intent);
+    }
+
+    @Override
+    public void goGalleryActivity(List<String> pic) {
+        if(pic==null || pic.size()==0)return;
+        Intent intent=new Intent();
+        intent.setClass(getContext(), GalleryActivity.class);
+        intent.putExtra(GalleryActivity.ARG_PIC, (Serializable) pic);
         startActivity(intent);
     }
 

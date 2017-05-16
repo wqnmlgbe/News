@@ -26,8 +26,6 @@ import open.cklan.com.topline.R;
 import open.cklan.com.topline.adapter.base.BaseNewsListAdapter;
 import open.cklan.com.topline.contract.NewsListContract;
 
-import static android.R.attr.data;
-import static open.cklan.com.topline.R.id.imageView;
 
 /**
  * AUTHOR：lanchuanke on 17/5/4 16:44
